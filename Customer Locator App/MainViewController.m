@@ -20,6 +20,7 @@
     _customerList = [[NSMutableArray alloc]initWithCapacity:0];
     
     [self getAndloadJSON];
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
