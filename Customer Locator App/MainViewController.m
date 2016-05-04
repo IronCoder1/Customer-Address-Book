@@ -88,7 +88,8 @@
     
     AOACustomer *newCustomer = self.customerList[indexPath.row];
     
-    //number formatter acting up revisit
+    //number formatter acting up revisit Goodnight
+    
 //    NSNumberFormatter *formatter = [[NSNumberFormatter alloc]init];
 //    formatter.numberStyle = NSNumberFormatterBehaviorDefault;
 //                                     
