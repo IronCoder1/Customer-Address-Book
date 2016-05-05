@@ -37,13 +37,8 @@
         NSError *jsonError;
         NSArray *customerJSONArray = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&jsonError];
         NSLog(@" jason array uphere is %@", customerJSONArray);
+        
         if   (!jsonError){
-            
-            //something wrong round here... (lldb) po self.customerList
-          //  <__NSArrayM 0x7faf3944cc70>(.
-            
-            //(lldb) po newCustomerObject.email
-          //  Sincere@april.biz
         
             for (NSMutableDictionary *aDict in customerJSONArray) {
             AOACustomer *newCustomerObject = [[AOACustomer alloc]init];
@@ -58,9 +53,9 @@
             newCustomerObject.company = aDict[@"company"];
             
             [self.customerList addObject:newCustomerObject];
-            dispatch_async(dispatch_get_main_queue(), ^{[self.tableView reloadData];});
             
             }
+            dispatch_async(dispatch_get_main_queue(), ^{[self.tableView reloadData];});
             NSLog(@" customerslist downhere is %@", self.customerList);
 
         }

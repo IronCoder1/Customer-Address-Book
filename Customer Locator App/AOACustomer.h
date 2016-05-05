@@ -10,9 +10,9 @@
 
 @interface AOACustomer : NSObject
 
-@property (nonatomic, strong) NSString *name;
-@property (nonatomic, strong) NSString *email;
-@property (nonatomic, strong) NSNumber *phoneNumber;
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSString *email;
+@property (nonatomic, copy) NSString *phoneNumber;
 @property (nonatomic, strong )NSNumber * userid;
 @property (nonatomic, strong) NSString * username;
 @property (nonatomic, strong) NSDictionary *address;
