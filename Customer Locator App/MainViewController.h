@@ -8,9 +8,17 @@
 
 #import <UIKit/UIKit.h>
 #import "AOACustomer.h"
+#import "AOAAddress.h"
+#import "AOACompany.h"
 #import "CellView.h"
+#import "AOAGeoLocation.h"
+#import "DetailViewController.h"
+
 @interface MainViewController : UITableViewController
 
 @property (strong, nonatomic) NSMutableArray *customerList;
+@property (strong, nonatomic) NSMutableArray *addressList;
+@property (strong, nonatomic) NSMutableArray *companyList;
+@property (strong, nonatomic) NSMutableArray *geoLocationList;
 
 @end

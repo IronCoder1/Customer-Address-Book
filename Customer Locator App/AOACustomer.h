@@ -7,6 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AOACompany.h"
+#import "AOAAddress.h"
+#import "AOAGeoLocation.h"
 
 @interface AOACustomer : NSObject
 
@@ -15,8 +18,10 @@
 @property (nonatomic, copy) NSString *phoneNumber;
 @property (nonatomic, strong )NSNumber * userid;
 @property (nonatomic, strong) NSString * username;
-@property (nonatomic, strong) NSDictionary *address;
 @property (nonatomic, strong) NSString *website;
-@property (nonatomic, strong) NSDictionary *company;
+
+@property (nonatomic, strong) AOAAddress *address;
+@property (nonatomic, strong) AOACompany *company;
+
 
 @end

@@ -75,10 +75,111 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="OFV-6H-zBD"/>
+                    <connections>
+                        <segue destination="C5G-c3-h3U" kind="show" identifier="toDetailSegue" id="mEq-RE-GPQ"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bAT-ID-BtL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1250" y="-77"/>
+            <point key="canvasLocation" x="1013" y="-95"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="HH9-kF-TMj">
+            <objects>
+                <viewController id="C5G-c3-h3U" customClass="DetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Wb4-c5-102"/>
+                        <viewControllerLayoutGuide type="bottom" id="2JA-e1-sCz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="S0d-Db-V61">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Street:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dY-mr-5Gt">
+                                <rect key="frame" x="20" y="154" width="297" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="KFa-NJ-i0u"/>
+                                    <constraint firstAttribute="width" constant="297" id="WhL-yO-fXn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CDq-3H-RuG">
+                                <rect key="frame" x="20" y="125" width="373" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="373" id="vgy-Pf-Dme"/>
+                                    <constraint firstAttribute="height" constant="21" id="ztl-TY-ADx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qVn-Nw-h1r">
+                                <rect key="frame" x="20" y="185" width="368" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="cFT-m8-hx7"/>
+                                    <constraint firstAttribute="width" constant="368" id="zEN-2c-fsX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5w2-Fy-zth">
+                                <rect key="frame" x="20" y="89" width="384" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="384" id="bx5-ls-xxp"/>
+                                    <constraint firstAttribute="height" constant="21" id="e8J-mL-VHM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9O3-Rw-B5W">
+                                <rect key="frame" x="0.0" y="278" width="600" height="322"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zip Code:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eU7-iI-tEp">
+                                <rect key="frame" x="20" y="217" width="220" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="IAf-bT-NkH"/>
+                                    <constraint firstAttribute="height" constant="21" id="sTQ-W0-s7M"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qVn-Nw-h1r" firstAttribute="top" secondItem="2dY-mr-5Gt" secondAttribute="bottom" constant="10" id="0Pt-zF-gEa"/>
+                            <constraint firstItem="qVn-Nw-h1r" firstAttribute="leading" secondItem="2dY-mr-5Gt" secondAttribute="leading" id="8V6-Yr-Ntt"/>
+                            <constraint firstItem="9O3-Rw-B5W" firstAttribute="top" secondItem="eU7-iI-tEp" secondAttribute="bottom" constant="40" id="8wG-HD-CX7"/>
+                            <constraint firstAttribute="trailing" secondItem="9O3-Rw-B5W" secondAttribute="trailing" id="BYd-N3-iMs"/>
+                            <constraint firstItem="2dY-mr-5Gt" firstAttribute="top" secondItem="CDq-3H-RuG" secondAttribute="bottom" constant="8" symbolic="YES" id="CYR-a5-XGI"/>
+                            <constraint firstItem="qVn-Nw-h1r" firstAttribute="leading" secondItem="eU7-iI-tEp" secondAttribute="leading" id="WqH-oo-TjT"/>
+                            <constraint firstItem="9O3-Rw-B5W" firstAttribute="leading" secondItem="S0d-Db-V61" secondAttribute="leading" id="gQO-cT-lBt"/>
+                            <constraint firstItem="CDq-3H-RuG" firstAttribute="top" secondItem="5w2-Fy-zth" secondAttribute="bottom" constant="15" id="gZr-EE-eu9"/>
+                            <constraint firstItem="eU7-iI-tEp" firstAttribute="top" secondItem="qVn-Nw-h1r" secondAttribute="bottom" constant="11" id="jm9-fO-dv2"/>
+                            <constraint firstItem="9O3-Rw-B5W" firstAttribute="bottom" secondItem="2JA-e1-sCz" secondAttribute="top" id="lqI-Fz-2mc"/>
+                            <constraint firstItem="CDq-3H-RuG" firstAttribute="top" secondItem="5w2-Fy-zth" secondAttribute="bottom" constant="15" id="nWF-22-HUF"/>
+                            <constraint firstItem="2dY-mr-5Gt" firstAttribute="leading" secondItem="CDq-3H-RuG" secondAttribute="leading" id="pw9-cB-nBO"/>
+                            <constraint firstItem="5w2-Fy-zth" firstAttribute="leading" secondItem="CDq-3H-RuG" secondAttribute="leading" id="wej-1r-aPp"/>
+                            <constraint firstItem="5w2-Fy-zth" firstAttribute="leading" secondItem="S0d-Db-V61" secondAttribute="leadingMargin" id="yom-LI-6if"/>
+                            <constraint firstItem="5w2-Fy-zth" firstAttribute="top" secondItem="Wb4-c5-102" secondAttribute="bottom" constant="25" id="zaH-Yz-TBo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cityLabel" destination="qVn-Nw-h1r" id="ug5-xL-xZY"/>
+                        <outlet property="compAddressMapView" destination="9O3-Rw-B5W" id="EIT-Ym-6sV"/>
+                        <outlet property="companyNameLabel" destination="5w2-Fy-zth" id="2HN-KW-GCb"/>
+                        <outlet property="streetNameLabel" destination="2dY-mr-5Gt" id="vBW-po-tVk"/>
+                        <outlet property="suiteLabel" destination="CDq-3H-RuG" id="yLT-BJ-Xfa"/>
+                        <outlet property="zipLabel" destination="eU7-iI-tEp" id="2TA-hI-JCo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gWu-GA-PsF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1704" y="-510"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="uen-kw-XPD">
